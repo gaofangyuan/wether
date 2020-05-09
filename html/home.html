@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+		<style>
+			/*背景固定屏幕*/
+			body {background: url(../img/back1.png) no-repeat 0 0px;background-attachment:fixed;background-size:100%;height:auto;}
+			
+			.ncs_toubu {height: 50px; width: 100%;}
+			.ncs_toubu div {padding: 0px 10px;}
+			.ncs_toubu span {line-height: 50px; font-size: 1em; color: #FFFFFF;}
+			
+			.ncs_wendu {margin: 30px auto; width: 130px;}
+			
+			.ncs_tianqi {width: 100%; height: 60px; background: rgba(108,140,195,.5);}
+			.ncs_jintianqi {width: 50%; height: 100%; box-sizing: border-box; border-right: 1px solid #FFFFFF;}
+			.ncs_mingtianqi {width: 50%; height: 100%; box-sizing: border-box; border-left: 1px solid #FFFFFF;}
+			.ncs_tianqi_data0 {width: 40%; height: 30px; line-height: 30px; margin-left: 10px; box-sizing: border-box; border-bottom: 1px solid #FFFFFF;}
+			.ncs_tianqi_data0 span {color: #FFFFFF; font-size: 0.9em;}
+			.ncs_tianqi_data1 {width: 50px; height: 20px; line-height: 20px; margin: 5px 10px; background: #f39700; border-radius: 10px;text-align: center;}
+			.ncs_tianqi_data1 span {color: #FFFFFF; font-size: 0.8em;}
+			.ncs_tianqi_data2 {width: 40%; height: 30px; line-height: 30px; margin-left: 10px;}
+			.ncs_tianqi_data2 span {color: #FFFFFF; font-size: 0.9em;}
+			.ncs_tianqi_data3 {width: 40%; height: 30px; line-height: 30px; margin-right: 10px; text-align: right;}
+			.ncs_tianqi_data3 span {color: #FFFFFF; font-size: 0.9em;}
+			
+			.ncs_yubao24th {width: 100%; height: 180px; background: rgba(255,255,255,.3); margin-top: 10px;}
+			.ncs_yubao24th_title {margin-left: 10px; line-height: 30px;}
+			.ncs_yubao24th_title span {color: #FFFFFF; font-size: 0.9em;}
+			
+			.ncs_guanggao1 {width: 100%; height: 100px; margin-top: 10px; background: rgba(255,255,255,.5);}
+			.ncs_guanggao1_title {width: 50px; height: 20px; font-size: 0.8em; background: rgba(0,0,0,.3); text-align: center; line-height: 20px; color: #FFFFFF; float: right; margin-top: 80px;}
+			.ncs_guanggao1_title:after {clear: both;}
+			
+			.ncs_yubao15day {width: 100%; height: 280px; background: rgba(255,255,255,.3); margin-top: 10px;}
+			.ncs_yubao15day_title {margin-left: 10px; line-height: 30px;}
+			.ncs_yubao15day_title span {color: #FFFFFF; font-size: 0.9em;}
+			.ncs_yubao15day iframe {width: 100%; height: 250px;}
+			
+		</style>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="ncs_toubu">
+			<div class="mui-pull-left">
+				<span>列表</span>
+			</div>
+			<div class="mui-pull-right">
+				<span>郑州</span>
+				<span>定位</span>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<!--头部end-->
+		
+		<!--今日温度-->
+		<div class="ncs_wendu">
+			<table border="0">
+				<tr>
+					<td rowspan="2" style="width: 100px; line-height: 100px; height: 100px; font-size: 5em; color: #FFFFFF; text-align: center;">18</td>
+					<td style="padding-top: 20px; font-size: 2em; width: 30px; height: 40px; color: #FFFFFF;">°</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom: 20px; font-size: 2em; width: 30px; height: 60px; color: #FFFFFF;">晴</td>
+				</tr>
+			</table>
+			
+		</div>
+		<!--今日温度end-->
+		
+		<!--今日明日天气-->
+		<div class="ncs_tianqi">
+			<div class="ncs_jintianqi mui-pull-left">
+				<div class="ncs_tianqi_data0 mui-pull-left"><span>今天</span></div>
+				<div class="ncs_tianqi_data1 mui-pull-right"><span>良</span></div>
+				<div style="clear: both;"></div>
+				<div class="ncs_tianqi_data2 mui-pull-left"><span>18~32℃</span></div>
+				<div class="ncs_tianqi_data3 mui-pull-right"><span>多云转小雨</span></div>
+			</div>
+			<div class="ncs_mingtianqi mui-pull-left">
+				<div class="ncs_tianqi_data0 mui-pull-left"><span>明天</span></div>
+				<div class="ncs_tianqi_data1 mui-pull-right" style="background: #009944;"><span>优</span></div>
+				<div style="clear: both;"></div>
+				<div class="ncs_tianqi_data2 mui-pull-left"><span>12~28℃</span></div>
+				<div class="ncs_tianqi_data3 mui-pull-right"><span>小雨转中雨</span></div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+		<!--今日明日天气end-->
+		
+		<!--24小时预报-->
+		<div class="ncs_yubao24th">
+			<div class="ncs_yubao24th_title"><span>24小时预报</span></div>
+			<div id="container" style="height: 150px; padding: 10px;"></div>
+		</div>
+		<!--24小时预报end-->
+		
+		<!--广告位1-->
+		<div class="ncs_guanggao1">
+			<div class="ncs_guanggao1_title">广告</div>
+		</div>
+		<!--广告位1end-->
+		
+		<!--15天预报-->
+		<div class="ncs_yubao15day">
+			<div class="ncs_yubao15day_title"><span>15天预报</span></div>
+			<iframe src="../js/echart/yubao15day.html" frameborder="0"></iframe>
+		</div>
+		<!--15天预报end-->
+		
+		<!--黄历-->
+		<div>
+			
+		</div>
+		<!--黄历end-->
+		<script src="../js/mui.min.js"></script>
+    	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    	<script type="text/javascript" src="../js/echart/yubao24th.js"></script>
+	</body>
+
+</html>
